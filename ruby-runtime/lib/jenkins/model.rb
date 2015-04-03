@@ -58,6 +58,7 @@ module Jenkins
 end
 
 require 'jenkins/model/descriptor'
+require 'jenkins/model/global_descriptor'
 require 'jenkins/model/describable'
 require 'jenkins/model/describable_native'
 require 'jenkins/model/describable_proxy'
@@ -67,5 +68,7 @@ require 'jenkins/model/action'
 require 'jenkins/model/action_proxy'
 require 'jenkins/model/root_action'
 require 'jenkins/model/root_action_proxy'
+require 'jenkins/model/unprotected_root_action'
+require 'jenkins/model/unprotected_root_action_proxy'
 require 'jenkins/model/build'
 require 'jenkins/model/listener'
