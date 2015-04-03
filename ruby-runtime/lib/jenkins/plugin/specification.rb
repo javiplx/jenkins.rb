@@ -14,6 +14,9 @@ module Jenkins
       # Defaults to name, capitalized.
       attr_writer :display_name
 
+      # Jenkins core version required
+      attr_accessor :core
+
       # Plugin version. This is used during dependency resolution
       attr_accessor :version
 
@@ -34,6 +37,7 @@ module Jenkins
       attr_reader :repository
 
       def initialize
+        @core = "1.514"
         @dependencies = {}
         @developers = {}
         yield(self) if block_given?
