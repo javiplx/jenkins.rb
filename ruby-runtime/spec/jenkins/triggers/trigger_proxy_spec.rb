@@ -15,6 +15,13 @@ describe Jenkins::Triggers::TriggerProxy do
     end
   end
 
+  describe "start" do
+    it "calls through to its implementation" do
+      @object.should_receive(:start)
+      @builder.start
+    end
+  end
+
   describe "stop" do
     it "calls through to its implementation" do
       expect(@object).to receive(:stop)
