@@ -1,6 +1,7 @@
 Jenkins::Plugin::Specification.new do |plugin|
   plugin.name = <%= name.inspect %>
   plugin.display_name = <%= config[:display_name].inspect %>
+  plugin.core = '1.514'
   plugin.version = '0.0.1'
   plugin.description = 'TODO: enter description here'
 
@@ -20,7 +21,7 @@ Jenkins::Plugin::Specification.new do |plugin|
   plugin.uses_repository :github => <%= repository_name.inspect %>
 
   # This is a required dependency for every ruby plugin.
-  plugin.depends_on 'ruby-runtime', '0.10'
+  plugin.depends_on 'ruby-runtime', '0.12'
 
   # This is a sample dependency for a Jenkins plugin, 'git'.
   #plugin.depends_on 'git', '1.1.11'

@@ -28,7 +28,7 @@ module Jenkins
 
           w.put "Plugin-Class", "ruby.RubyPlugin"
           w.put "Plugin-Version", @spec.version
-          w.put "Jenkins-Version", "1.432"
+          w.put "Jenkins-Version", @spec.core
 
           w.put "Plugin-Dependencies", @spec.dependencies.map{|k,v| "#{k}:#{v}"}.join(",")
         end
