@@ -8,7 +8,11 @@ module Jenkins::Model
 
     def initialize(*args)
       super
-      load
+      begin
+        load
+      rescue Exception => ex
+        logger.severe "Cannot load globan plugin configuration : #{ex}"
+      end
     end
 
     def load
@@ -56,6 +60,10 @@ module Jenkins::Model
 
     def parse(form)
       raise Exception.new("parse is an abstract method")
+    end
+
+    def logger
+      @logger ||= Java.java.util.logging.Logger.getLogger(GitlabWebHookRootActionDescriptor.class.name)
     end
   end
 end
