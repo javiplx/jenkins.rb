@@ -1,6 +1,6 @@
 module Jenkins
   class Plugin
-    VERSION = "0.4.1"
-    RUNTIME_VERSION_DEPENDENCY = "0.2.3"
+    VERSION = "0.4.2-1"
+    RUNTIME_VERSION_DEPENDENCY = "0.2"
   end
 end

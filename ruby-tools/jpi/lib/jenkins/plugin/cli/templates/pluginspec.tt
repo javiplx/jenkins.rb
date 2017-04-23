@@ -21,7 +21,7 @@ Jenkins::Plugin::Specification.new do |plugin|
   plugin.uses_repository :github => <%= repository_name.inspect %>
 
   # This is a required dependency for every ruby plugin.
-  plugin.depends_on 'ruby-runtime', '0.12'
+  plugin.depends_on 'ruby-runtime', '0.13'
 
   # This is a sample dependency for a Jenkins plugin, 'git'.
   #plugin.depends_on 'git', '1.1.11'
