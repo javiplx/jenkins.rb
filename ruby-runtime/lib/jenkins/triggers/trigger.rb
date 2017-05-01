@@ -10,6 +10,7 @@ module Jenkins
       describe_as Java.hudson.triggers.Trigger, :with => Jenkins::Triggers::TriggerDescriptor
 
       attr_accessor :job
+      transient :job
 
       # Executes the triggered task.
       #
